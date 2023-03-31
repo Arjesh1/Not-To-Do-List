@@ -1,8 +1,4 @@
-// get form data on form submit
-// store data in a global array
-// create a display function to display all the data from array to entry list
- 
-let taskList = []
+ let taskList = []
 let badList = []
 const hrsPerWeek = 24 * 7
 
@@ -40,8 +36,8 @@ const displayTask = () => {
         <td>${item.task}</td>
         <td>${item.hr} hr(s)</td>
         <td class="text-end">
-            <button  onclick="listTask(${i})" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-            <button  onclick="markAsNotToDo(${i})" class="btn btn-success"><i class="fa-solid fa-right-long"></i></button>
+            <button  onclick="listTask(${i})" class="btn btn-danger"><i class="fa-solid fa-trash bg-danger"></i></button>
+            <button  onclick="markAsNotToDo(${i})" class="btn btn-success"><i class="fa-solid fa-right-long bg-success"></i></button>
         </td>
         </tr>
         `    
@@ -58,8 +54,8 @@ badList.map((item, i) => {
     <td>${item.task}</td>
     <td>${item.hr} hr(s)</td>
     <td class="text-end">
-        <button onclick="deleteBadTask(${i})" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-        <button  onclick="markAsToDo(${i})" class="btn btn-warning"><i class="fa-solid fa-left-long"></i></button>
+        <button onclick="deleteBadTask(${i})" class="btn btn-danger "><i class="fa-solid fa-trash bg-danger"></i></button>
+        <button  onclick="markAsToDo(${i})" class="btn btn-warning"><i class="fa-solid fa-left-long bg-warning"></i></button>
     </td>
     </tr>
     `    
